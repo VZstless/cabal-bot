@@ -11,3 +11,4 @@ wheels/
 separated/
 
 .env
+cabal_source

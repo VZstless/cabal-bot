@@ -6,8 +6,10 @@ readme = "README.md"
 authors = [
     { name = "VZstless", email = "i@vzstless.moe" }
 ]
-requires-python = ">=3.14"
-dependencies = []
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "myshell-openvoice",
+]
 
 [project.scripts]
 cabal-bot = "cabal_bot:main"
@@ -15,6 +17,13 @@ cabal-bot = "cabal_bot:main"
 [build-system]
 requires = ["uv_build>=0.12.3,<0.13.0"]
 build-backend = "uv_build"
+
+[tool.uv]
+constraint-dependencies = ["onnxruntime<1.24"]
+override-dependencies = ["faster-whisper>=1.0.3"]
+
+[tool.uv.sources]
+myshell-openvoice = { git = "https://github.com/myshell-ai/OpenVoice.git" }
 
 [dependency-groups]
 dev = [

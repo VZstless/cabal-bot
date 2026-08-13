@@ -1,0 +1,22 @@
+[project]
+name = "cabal-bot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "VZstless", email = "i@vzstless.moe" }
+]
+requires-python = ">=3.14"
+dependencies = []
+
+[project.scripts]
+cabal-bot = "cabal_bot:main"
+
+[build-system]
+requires = ["uv_build>=0.12.3,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "demucs>=4.0.1",
+]

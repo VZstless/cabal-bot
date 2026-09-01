@@ -9,11 +9,15 @@ authors = [
 requires-python = ">=3.10,<3.14"
 dependencies = [
     "myshell-openvoice",
+    "pyright>=1.1.411",
     "python-telegram-bot>=22.8",
+    "ruff>=0.16.2",
+    "setuptools<82",
 ]
 
 [project.scripts]
 cabal-bot = "cabal_bot:main"
+cabal-train = "training:main"
 
 [build-system]
 requires = ["uv_build>=0.12.3,<0.13.0"]

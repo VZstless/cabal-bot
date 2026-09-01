@@ -12,3 +12,6 @@ separated/
 
 .env
 cabal_source
+checkpoints
+assets
+*.pth
